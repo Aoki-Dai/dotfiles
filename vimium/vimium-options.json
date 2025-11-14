@@ -1,0 +1,5 @@
+{
+  "regexFindMode": true,
+  "settingsVersion": "2.3.1",
+  "userDefinedLinkHintCss": "/* ================================================\n   Vimium Hint: 見やすさ最重視の黒背景バージョン\n   黒背景＋白文字：人間の視認性が最も高い配色\n   ================================================ */\n\ndiv > .vimiumHintMarker {\n  /* 背景は完全な黒。透明を使わず輪郭を明確にする */\n  background: #000000;\n\n  /* 枠線は白でコントラスト最大にして視認性アップ */\n  border: 2px solid #FFFFFF;\n\n  /* モダン UI を意識しつつ視認性を損なわない程度の丸み */\n  border-radius: 6px;\n\n  /* ラベルの内側に少し余白をつけて読みやすくする */\n  padding: 2px 5px;\n}\n\ndiv > .vimiumHintMarker span {\n  /* テキスト色を白に。黒背景とのコントラストが最大 */\n  color: #FFFFFF;\n\n  /* 少し太めのフォントで視認しやすくする */\n  font-weight: 700;\n\n  /* 小さすぎると読みにくいので固定で 13px */\n  font-size: 13px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n  /* 一致部分だけアクセントカラーで強調（macOS の青） */\n  color: #0A84FF; /* macOS Blue */\n}"
+}
