@@ -1,6 +1,3 @@
-# bash から移行した場合は $PATH を変更する必要があるかもしれません。
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
 # Oh My Zsh のインストールディレクトリへのパス。
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -105,12 +102,26 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# ~/.local/bin/env を読み込み、ローカルにインストールしたツール（uv 等）の環境変数を設定します
 . "$HOME/.local/bin/env"
+
+# Homebrew でインストールした Ruby を macOS 標準の Ruby よりも優先して使えるようにします
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
+# NVM（Node Version Manager）の設定ディレクトリを指定します
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# NVM 本体のスクリプトが存在すれば読み込み、Node.js のバージョン管理を有効にします
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# NVM 用の bash 補完スクリプトが存在すれば読み込み、タブ補完を有効にします
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# Added by Antigravity
+# Antigravity（AI コーディングアシスタント）の実行ファイルへのパスを追加します
 export PATH="/Users/aokidai/.antigravity/antigravity/bin:$PATH"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+# Rancher Desktop（コンテナ管理ツール）の CLI ツールへのパスを追加します
+export PATH="/Users/aokidai/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# mise（旧 rtx）を有効化し、各種ランタイム（Python, Node.js 等）のバージョン管理を行います
+eval "$(mise activate zsh)"
