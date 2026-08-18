@@ -109,11 +109,11 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # NVM（Node Version Manager）の設定ディレクトリを指定します
-export NVM_DIR="$HOME/.nvm"
+# export NVM_DIR="$HOME/.nvm"
 # NVM 本体のスクリプトが存在すれば読み込み、Node.js のバージョン管理を有効にします
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 # NVM 用の bash 補完スクリプトが存在すれば読み込み、タブ補完を有効にします
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 export PATH="/Users/aokidai/.antigravity/antigravity/bin:$PATH"
 
