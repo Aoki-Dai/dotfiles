@@ -115,7 +115,6 @@ export NVM_DIR="$HOME/.nvm"
 # NVM 用の bash 補完スクリプトが存在すれば読み込み、タブ補完を有効にします
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# Antigravity（AI コーディングアシスタント）の実行ファイルへのパスを追加します
 export PATH="/Users/aokidai/.antigravity/antigravity/bin:$PATH"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
@@ -125,3 +124,11 @@ export PATH="/Users/aokidai/.rd/bin:$PATH"
 
 # mise（旧 rtx）を有効化し、各種ランタイム（Python, Node.js 等）のバージョン管理を行います
 eval "$(mise activate zsh)"
+
+# Flutter
+export PATH="/Users/aokidai/flutter/bin:$PATH"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# OpenJDK 21（Homebrew でインストール済み）の JAVA_HOME とパスを設定します
+export JAVA_HOME="/opt/homebrew/opt/openjdk@21"
+export PATH="$JAVA_HOME/bin:$PATH"
