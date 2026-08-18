@@ -132,3 +132,6 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 # OpenJDK 21（Homebrew でインストール済み）の JAVA_HOME とパスを設定します
 export JAVA_HOME="/opt/homebrew/opt/openjdk@21"
 export PATH="$JAVA_HOME/bin:$PATH"
+
+# fnm（Node.js バージョン管理ツール）の設定を読み込み
+eval "$(fnm env --use-on-cd --shell zsh)"
